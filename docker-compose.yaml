@@ -1,0 +1,28 @@
+version: "3"
+services:
+  application:
+    image: "adoptopenjdk/openjdk11:jdk-11.0.13_8"
+    expose:
+      - 5005
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      - "ENV_VAR=value"
+    working_dir: /grails_docker
+    volumes:
+      - .:/grails_docker
+      - ./cache/gradle:/root/.gradle
+      - ./cache/grails:/root/.grails
+      - ./cache/m2:/root/.m2
+    networks:
+      - app-network
+    command:
+      ./grailsw run-app
+      #ls
+    #- "daemon off;"
+    #tty: true
+
+networks:
+  app-network:
+    driver: bridge
