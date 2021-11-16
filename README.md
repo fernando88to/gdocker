@@ -1,7 +1,8 @@
 ### Project Docker + GRAILS
 
-grails version : 5.0.1
-java version: 11
+1. grails version : 5.0.1
+
+2. java version: 11
 
 ### First step => Create debug remote
 
@@ -58,5 +59,7 @@ docker-compose up -d
 Click on the debug icon.
 
 
-### Fifth step => Open browser and go to http://localhost:8080/
+### Fifth step 
+
+Open browser and go to http://localhost:8080/
 
